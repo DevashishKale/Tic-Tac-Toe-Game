@@ -432,17 +432,17 @@ void play()
         {
             char result = win();
             char temp='/';
-            if(result== temp && counter==9)
+            if(result== temp && counter==9)//Draw Condition
             {
                 cout<<"The Match is Drawn"<<endl<<endl;
                 break;
             }
-            else if(result=='X')
+            else if(result=='X')//'x' Win Condition
             {
                 cout<<player1<<" Wins!!! "<<endl<<endl;
                 break;
             }
-            else if(result=='O')
+            else if(result=='O')//'O' Win Condition
             {
                 cout<<player2<<" Wins!!! "<<endl<<endl;
                 break;
@@ -454,14 +454,14 @@ void play()
 
 
 
-
+//Start of program
 int main(){
     cout<<"OK Let us begin "<<endl<<endl;
     cout<<"Enter the players names: "<<endl;
     cout<<"Player1: ";
-    cin>>player1;
+    cin>>player1;//taking input of player1 name
     cout<<"Player2: ";
-    cin>>player2;
+    cin>>player2;//taking input of player2 name
 
     draw();
     play();
