@@ -2,9 +2,9 @@
 using namespace std;
 
 char matrix[3][3] = {'_','_','_','_','_','_','_','_','_'};//Declaring matrix as global
-int input;
-string player1;
-string player2;
+int input;//taking input
+string player1;//String for taking player1 name
+string player2;//String for taking player2 name
 
 //Conditions for winning. Below conditions should be checked everytime the player has made a move
 char win()
@@ -120,7 +120,7 @@ void play()
             cin>>input;
         }
         
-
+//switching different cases based on input
         switch(input)
         {
             case 1: 
@@ -432,17 +432,17 @@ void play()
         {
             char result = win();
             char temp='/';
-            if(result== temp && counter==9)
+            if(result== temp && counter==9)//Draw Condition
             {
                 cout<<"The Match is Drawn"<<endl<<endl;
                 break;
             }
-            else if(result=='X')
+            else if(result=='X')//'x' Win Condition
             {
                 cout<<player1<<" Wins!!! "<<endl<<endl;
                 break;
             }
-            else if(result=='O')
+            else if(result=='O')//'O' Win Condition
             {
                 cout<<player2<<" Wins!!! "<<endl<<endl;
                 break;
@@ -454,14 +454,14 @@ void play()
 
 
 
-
+//Start of program
 int main(){
     cout<<"OK Let us begin "<<endl<<endl;
     cout<<"Enter the players names: "<<endl;
     cout<<"Player1: ";
-    cin>>player1;
+    cin>>player1;//taking input of player1 name
     cout<<"Player2: ";
-    cin>>player2;
+    cin>>player2;//taking input of player2 name
 
     draw();
     play();
