@@ -1,11 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-char matrix[3][3] = {'_','_','_','_','_','_','_','_','_'};
+char matrix[3][3] = {'_','_','_','_','_','_','_','_','_'};//Declaring matrix as global
 int input;
 string player1;
 string player2;
 
+//Conditions for winning. Below conditions should be checked everytime the player has made a move
 char win()
 {
     if(matrix[0][0]=='X' && matrix[0][1]=='X' && matrix[0][2]=='X')
@@ -83,6 +84,7 @@ char win()
     }
 }
 
+//Function for printing the matrix
 void draw()
 {
     cout<<endl;
@@ -97,6 +99,7 @@ void draw()
     cout<<endl;
 }
 
+//The is the function for playing. 
 void play()
 {
     bool isInvalid;
@@ -462,9 +465,6 @@ int main(){
 
     draw();
     play();
-
-    
-
 
     return 0;
 }
