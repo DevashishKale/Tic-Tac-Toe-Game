@@ -2,9 +2,9 @@
 using namespace std;
 
 char matrix[3][3] = {'_','_','_','_','_','_','_','_','_'};//Declaring matrix as global
-int input;
-string player1;
-string player2;
+int input;//taking input
+string player1;//String for taking player1 name
+string player2;//String for taking player2 name
 
 //Conditions for winning. Below conditions should be checked everytime the player has made a move
 char win()
@@ -120,7 +120,7 @@ void play()
             cin>>input;
         }
         
-
+//switching different cases based on input
         switch(input)
         {
             case 1: 
